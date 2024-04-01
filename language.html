@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root{
+	--bg-color: #1f242d;
+	--second-bg-color: #323946;
+	--text-color: #fff;
+	--main-color:#0ef;
+	--second-bg-color: #323946;
+	--text-color: #fff;
+	--main-color:#0ef;
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body{
+	background: var(--bg-color);
+	color: var(--text-color); /*color changer for text of website*/
+}
+
+section {
+	min-height: 100vh;
+	padding: 10rem 9% 2rem;
+} 
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 9%;
+	background: var(--bg-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+        /*Portfolio start*/
+.portfolio {
+	background: var(--second-bg-color);
+
+}
+.portfolio h2{
+	margin-bottom: 4rem;
+}
+.portfolio-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2.5rem;
+
+}
+.portfolio-container .portfolio-box {
+	position: relative;
+	border-radius: 2rem;
+	box-shadow: 0 0 1rem var(--bg-color);
+	overflow: hidden;
+	display: flex;
+}
+.portfolio-box img {
+	width: 100%;
+	transition: 5s ease;
+}
+.portfolio-box:hover img{
+	transform: scale(1.1);
+}
+.portfolio-box .portfolio-layer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 4rem;
+	transform: translateY(100%);
+	transition: .5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+	transform: translateY(0);
+}
+.portfolio-layer h4{
+	font-size: 3rem;
+}
+.portfolio-layer p{
+	font-size: 1.6rem;
+	margin: .3rem 0 1rem;
+	
+}
+.portfolio-layer a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 5rem;
+	height: 5rem;
+	background: var(--text-color);
+	border-radius: 50%;
+
+}
+.portfolio-layer a i {
+	font-size: 2rem;
+	color: var(--second-bg-color);
+
+}
+.heading {
+	text-align: center;
+	font-size: 4.5rem;
+}
+span {
+	color: var(--main-color);
+
+}
+#menu-icon{
+	font-size: 3.6rem;
+	color: var(--text-color);
+	display: none;
+}
+/**/
+/*BREAKPOINTS*/
+@media (max-width : 1200px){
+	html{
+		font-size: 55%;
+
+	}
+}
+
+@media (max-width : 991px){
+	.header{
+		padding: 2rem 3%;
+	}
+	section{
+		padding: 10rem 3% 2rem;
+	}
+	
+	.portfolio{
+		padding-bottom: 7rem;
+	}
+	
+	
+}
+
+@media (max-width : 768px){
+	#menu-icon{
+		display: block;
+
+	}
+	.portfolio h2{
+		margin-bottom: 3rem;
+	}
+	.portfolio-container {
+		grid-template-columns: repeat(2,1fr);
+
+	}
+}
+
+@media (max-width :617px){
+	.portfolio-container{
+		grid-template-columns: 1fr;
+	}
+
+}
+
+@media (max-width :450px){
+	html{
+		font-size: 50%;
+	}
+	
+}
+
+
+/**/
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!----->
+    <!----->
+
+            <!---Portfolio start ---->
+			<section class="portfolio" id="portfolio">
+				<h2 class="heading"> Technical <span>CERTIFICATES</span></h2>
+				<div class="portfolio-container">
+					
+					<div class="portfolio-box">
+						<img src="C-Programming.png" alt="">
+						<div class="portfolio-layer">
+							<h4>C language</h4>
+							<p>certificate of course compeletion.</p>
+							<a href="c.pdf"><i class='bx bx-link-external'></i></a>
+						</div>
+					</div>
+					<div class="portfolio-box">
+						<img src="portfolio2.jpg" alt="">
+						<div class="portfolio-layer">
+							<h4>
+                                jAVA
+                            </h4>
+							<p>certificate of core-java course compeletion.</p>
+							<a href="java.pdf"><i class='bx bx-link-external'></i></a>
+						</div>
+					</div>
+                    <div class="portfolio-box">
+						<img src="portfolio3.jpg" alt="">
+						<div class="portfolio-layer">
+							<h4>
+                                ORACLE
+                            </h4>
+							<p>certificate of Oracle course compeletion.</p>
+							<a href="java.pdf"><i class='bx bx-link-external'></i></a>
+						</div>
+					</div>
+                    <div class="portfolio-box">
+						<img src="portfolio4.jpg" alt="">
+						<div class="portfolio-layer">
+							<h4>
+                                WEB-DEVELOPMENT
+                            </h4>
+							<p>certificate of Web-Development course compeletion.</p>
+							<a href="java.pdf"><i class='bx bx-link-external'></i></a>
+						</div>
+					</div>
+					<div class="portfolio-box" >
+						<img src="portfolio4.jpg" alt="">
+						<div class="portfolio-layer">
+							<h4>
+                                Quantitative Aptitude
+									training course from TNS India Foundation
+                            </h4>
+							<p>CERTIFICATE OF Quantitative Aptitude
+								training course from TNS India Foundation COMPLETION.</p>
+							<a href="Rigveda Vinodrao Kale_TC03040312 (1).pdf"><i class='bx bx-link-external'></i></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		 <!---Portfolio end ---->
+
+</body>
+</html>
